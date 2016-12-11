@@ -21,8 +21,11 @@
     <style>
     html, body {font-family: 'Lato'; 
 	background-color: #E3FEF5}
+	.col-lg-2 {width: 16.66%;
+			height: 100%;}
+	.col-lg-8 {width: 66.66%;
+			height: 100%;}
 	.fa-btn { margin-right: 6px;}
-    .col-md-2{ background-color: #fff;}
     .navbar { background-color: #24F5B5  
 	</style>
 </head>
@@ -43,49 +46,51 @@
 	                   
 	                    <span class="caret"></span></a>
 	                    <ul class="dropdown-menu">
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('keyboard') }}">Keyboard</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('headset') }}">Headset</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('mouse') }}">Mouse</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('speaker') }}">Speaker</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('external_hdd') }}">External HDD</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('mouse_pad') }}">Mouse Pad</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('memory_card') }}">Memory Card</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('ups') }}">UPS</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('stabilizer') }}">Stabilizer</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('modem') }}">Modem</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('printer') }}">Printer</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('flashdisk') }}">Flashdisk</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('aksesoris/keyboard') }}">Keyboard</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('aksesoris/headset') }}">Headset</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('aksesoris/mouse') }}">Mouse</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('aksesoris/speaker') }}">Speaker</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('aksesoris/external_hdd') }}">External HDD</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('aksesoris/mouse_pad') }}">Mouse Pad</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('aksesoris/memory_card') }}">Memory Card</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('aksesoris/ups') }}">UPS</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('aksesoris/stabilizer') }}">Stabilizer</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('aksesoris/modem') }}">Modem</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('aksesoris/printer') }}">Printer</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('aksesoris/flashdisk') }}">Flashdisk</a></li>
 	                     <li role="presentation" class="divider"></li>
 	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('aksesoris') }}">All Aksesoris</a></li>
-
 	                    </ul>
 	            </li>
 	            <li class="dropdown">
 	                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Komponen   
 	                    <span class="caret"></span></a>
 	                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('processor') }}">Processor</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('ram') }}">RAM</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('motherboard') }}">Motherboard</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('harddisk') }}">Harddisk</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('power_supply') }}">Power Supply</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('monitor') }}">Monitor</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('vga') }}">VGA</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('casing') }}">Casing</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('os') }}">OS</a></li>
-	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('software') }}">Software</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('komponen/processor') }}">Processor</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('komponen/ram') }}">RAM</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('komponen/motherboard') }}">Motherboard</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('komponen/harddisk') }}">Harddisk</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('komponen/power_supply') }}">Power Supply</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('komponen/monitor') }}">Monitor</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('komponen/vga') }}">VGA</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('komponen/casing') }}">Casing</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('komponen/os') }}">OS</a></li>
+	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('komponen/software') }}">Software</a></li>
 	                     <li role="presentation" class="divider"></li>
 	                     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('komponen') }}">All Komponen</a></li>
 	                    </ul>
 	            </li>
 	        </ul>
 	        <ul class="navbar-form navbar-right">
-	        <div class="form-group">
-	            <input type="search" placeholder="search" class="form-control">
-	            </div>
-	            <button type="submit" class="btn btn-success">
-	                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-	            </button>
+	        	<form action = "{{url('/search')}}" method = "post">
+	        		{{ csrf_field() }}
+		        	<div class="form-group">
+		           		<input type="text" class="form-control" name="search"  placeholder="search">
+	    	    	</div>
+		        	<button type="submit" class="btn btn-success" name="submit">
+	    	        	<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+	        		</button>
+	        	</form>
 	        </ul>
 	        </div>
 	    </div>

@@ -2,7 +2,7 @@
 
 @section('pages')
 <?php
-    $datass=DB::select('select * from notebook');
+    $datass=DB::select('select * from komponen where type = ?',[e($name)]);
 ?>
 <div class="row">
     <div class="col-lg-2">
@@ -14,22 +14,15 @@
         </div>
     <div class="col-lg-10">
         <div class="container">
-            <h1>Laptop</h1>
+            <h1>Komponen Laptop</h1>
             <div style="overflow-x:auto;">
             <table class="table table-striped"> 
                 <thead>
-                    <th>Model</th>
-                    <th>Processor</th>
-                    <th>OS</th>
-                    <th>Storage</th>
-                    <th>RAM</th>
-                    <th>Graphic</th>
-                    <th>Connection</th>
-                    <th>Camera</th>
-                    <th>Display</th>
-                    <th>Colour</th>
+                    <th>Nama</th>
+                    <th>Item Type</th>
                     <th>Brand</th>
                     <th>Price</th>
+                    <th>Description</th>
                     <th>inserter</th>
                     <th>&nbsp;</th>
                     <th>&nbsp;</th>
@@ -40,24 +33,17 @@
                     <tr>
                         <!-- Task Name -->
                         <td class="table-text"><div>{{ $data->nama }}</div></td>
-                        <td class="table-text"><div>{{ $data->prosesor }}</div></td>
-                        <td class="table-text"><div>{{ $data->os }}</div></td>
-                        <td class="table-text"><div>{{ $data->storage }}</div></td>
-                        <td class="table-text"><div>{{ $data->ram }}</div></td>
-                        <td class="table-text"><div>{{ $data->graphic }}</div></td>
-                        <td class="table-text"><div>{{ $data->koneksi }}</div></td>
-                        <td class="table-text"><div>{{ $data->kamera }}</div></td>
-                        <td class="table-text"><div>{{ $data->display }}</div></td>
-                        <td class="table-text"><div>{{ $data->warna }}</div></td>
+                        <td class="table-text"><div>{{ $data->type }}</div></td>
                         <td class="table-text"><div>{{ $data->brand }}</div></td>
                         <td class="table-text"><div>{{ $data->harga }}</div></td>
+                        <td class="table-text"><div>{{ $data->deskripsi }}</div></td>
                         <td class="table-text"><div>{{ $data->inserter }}</div></td>
                         <td><a href="">Add to cart</a></a> 
                         @if (session()->has('members'))
-                        <td><a href={{url('update_laptop')}}/{{$data->laptop_id}}>Edit</a></td>
+                        <td><a href={{url('update_komponen')}}/{{$data->kom_id}}>Edit</a></td>
                         @endif
-                        @if (session()->has('members'))
-                        <td><a href={{url('delete_laptop')}}/{{$data->laptop_id}}>Delete</a></td>
+                        @if (session()->has('admin'))
+                        <td><a href={{url('delete_komponen')}}/{{$data->kom_id}}>Delete</a></td>
                         @endif
                     </tr>
                     @endforeach
@@ -65,7 +51,7 @@
             </table>
             </div>
             @if (session()->has('members'))
-                <a href="insert_laptop">Insert</a>
+                <a href="insert_komponen">Insert</a>
             @endif
         </div>
     </div>
